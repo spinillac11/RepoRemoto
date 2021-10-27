@@ -14,7 +14,7 @@ int main (void)
     std::cout << z << std::endl;
     z = x / y;
     std::cout << z << std::endl;
-    int m = 9 / 4; // como es una ariable entera cuando lo imprima se elimina la parte decimal
+    int m = 9 / 4; // como es una variable entera cuando lo imprima se elimina la parte decimal
     std::cout << m << std::endl;
 
     std::cout << 3*2-4.0/5 << std::endl; // Trunco el 4 para que localmente sea un variable double y no entera 
