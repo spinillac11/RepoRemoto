@@ -1,7 +1,8 @@
 #include <iostream>
-#include <cmath>
+#include <cmath> // Operaciones matematicas
+#include <cstdlib> // Convertir strings en integers
 /*
-N->
+N-> 600851475147
 Calcular el factor primo mas grande:
 calcular los divisores
 calcular la suma de los divisores
@@ -11,9 +12,9 @@ long long largestprimediv (long long n); //DEclaracion: Retorno de int long long
 bool isprime (long long n); // declaracion, funcion que retorna un bool
 long long sumprimefactors (long long n);
 
-int main(void)
+int main(int argc, char **argv) //Introducir argumentos al programa
 {
-    const long long N = 600851475147; //No hay que darle tantas libertades al codigo de modificar variables
+    const long long N = std::atoll(argv[1]); //N sera igual al argumento 1 introducido en la consola (El arg[0] siempre es el ./a.out)
     std::cout << largestprimediv(N) << std::endl;
     std::cout << sumprimefactors(N) << std::endl;
     
@@ -34,7 +35,6 @@ long long largestprimediv (long long n) //No importa que el parametro se repita 
             result = largedivisor;
             break;
             } 
-
         }
     }
     return result;
