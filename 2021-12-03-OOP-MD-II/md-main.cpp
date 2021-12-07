@@ -7,6 +7,7 @@ int main(void)
   // start system
   initial_conditions(ball);
   compute_force(ball);
+  compute_energy(ball);
   start_integration(ball, DT);
   print(ball, 0.0);
 
@@ -14,6 +15,7 @@ int main(void)
   for(int istep = 0; istep < NSTEPS; ++istep) {
     time_integration(ball, DT);
     compute_force(ball);
+    compute_energy(ball);
     print(ball, istep*DT);
   }
   
